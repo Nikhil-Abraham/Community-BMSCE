@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <div class="flex justify-between">
+    <div class="flex justify-between w-full">
       <div class="text-custom_grey-100 font-Nato font-semibold text-2xl p-4 ml-7 ">
         Community
       </div>
