@@ -40,18 +40,7 @@ export default function Home() {
               </div>
             </form>
           </div>
-
-      {/* <div class="text-custom_grey-150 font-Nato font-semibold text-xl">
-        Community
-        <div
-          id="register_area-jq"
-          class="container  punchline flex flex-col items-center
-                bg-custom_pink w-full h-screen mb-8 ...    "
-        >
-          <div class="py-6 mx-20 mt-6  text-xl ...">LOGIN</div>
           
-        </div>
-      </div> */}
     </div>
     </div>
   );
