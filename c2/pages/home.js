@@ -28,7 +28,68 @@ export default function Home() {
                 </div>
             </nav>
             </div>
-            <div>PROJECT:</div>
+            <div>
+            PROJECT:
+            <div class="md:flex bg-blue-100 rounded-xl p-8 md:p-0">
+  <div class="pt-6 md:p-8 text-center space-y-4">
+    <blockquote>
+      <p class="text-lg font-small">
+“This dataset is of passengers who traveled on the titanic. It has details like passenger age, ticket fare, cabin, and gender. Based on this
+information, you will need to predict whether these passengers survived or not.It is a simple binary classification problem, and all you need to do
+is predict if a particular passenger survived. The best thing about this dataset is that all the pre-processing is done for you. You have a nice,
+clean dataset to train your machine learning model.”
+      </p>
+    </blockquote>
+    <figcaption class="font-medium">
+      <div class="text-sky-500">
+        Justin Foley
+      </div>
+      <div class="text-gray-700">
+        Engineer, Ohio
+      </div>
+    </figcaption>
+  </div>
+</div>
+<div class="md:flex bg-blue-100 rounded-xl p-8 md:p-0">
+<div class="pt-6 md:p-8 text-center space-y-4">
+<blockquote>
+<p class="text-lg font-small">
+“ If you know python then you could develop this data analytics project in python which can detect a hoax or false news that is generated to fulfill some
+political agenda. This news is propagated through social media channels and other online media. The model is built using the python language which can
+accurately detect the genuineness of a news item. You could use a PassiveAggressiveClassifier to build a TfidfVectorizer which can classify news into
+“fake” or “real”.”
+</p>
+</blockquote>
+<figcaption class="font-medium">
+<div class="text-sky-500">
+Kumar
+</div>
+<div class="text-gray-700">
+Data Analyst, Chennai
+</div>
+</figcaption>
+</div>
+</div>
+<div class="md:flex bg-blue-100 rounded-xl p-8 md:p-0">
+<div class="pt-6 md:p-8 text-center space-y-4">
+<blockquote>
+<p class="text-lg font-small">
+“User interface (UI) designers work closely with user experience (UX) designers and other design specialists. Their job is to make sure that every page
+and every step a user will experience in their interaction with the finished product will conform to the overall vision created by UX designers.”
+</p>
+</blockquote>
+<figcaption class="font-medium">
+<div class="text-sky-500">
+Sarah Dayan
+</div>
+<div class="text-gray-700">
+UI/UX designer, Algolia
+</div>
+</figcaption>
+</div>
+</div>
+            </div>
+
     <div>ALUMINI:</div>
       <div>TEACHER:</div>
         </div>
