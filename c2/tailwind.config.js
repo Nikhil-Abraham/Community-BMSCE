@@ -18,6 +18,7 @@ module.exports = {
         },
         custom_pink: "#e3a6f6",
         custom_blue: "#506cae",
+        custom_cyan: "#739bfa"
       },
     },
   },
