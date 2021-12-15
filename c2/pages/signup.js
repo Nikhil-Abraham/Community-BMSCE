@@ -9,7 +9,7 @@ export default function Home() {
 
       <div class="w-screen bg-custom_white p-20 flex justify-evenly">
         <div class="text-2xl font-Nato p-5">Join the Community</div>
-        <div>
+        <div class="mx-20 border-solid border-4 border-custom_grey-500/50 rounded-lg w-1/4 p-8">
           <form action="/intro" method="post" name="register-form">
             <div class="form-group px-6 py-6">
               <label class="form-label" for="email">
@@ -47,7 +47,7 @@ export default function Home() {
                 id="pwd"
               ></input>
             </div>
-            <div class="register-btn  bg-custom_blue hover:bg-custom_cyan  rounded-lg mt-6 w-20 h-8 px-3 p-1 ...">
+            <div class="register-btn  bg-custom_blue hover:bg-custom_cyan  rounded-lg mx-20 mt-6 w-20 h-8 px-3 p-1 ...">
               <a href="">Signup</a>
             </div>
           </form>
