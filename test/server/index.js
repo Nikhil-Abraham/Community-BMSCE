@@ -23,19 +23,23 @@ app.post("/api/register", async (req, res) => {
 });
 
 app.post("/api/login", async (req, res) => {
-  const user = await User.findOne({
-    email: req.body.email,
-    password: req.body.password,
-  });
-  if (user) {
-    res.json({ status: "ok", user: true });
-  } else {
+  try {
+    const user = await User.findOne({
+      email: req.body.email,
+    });
+    if (user) {
+      res.json({ status: "ok", user: true });
+    } else {
+      res.json({ status: "error", user: false });
+    }
+    console.log(user);
+  } catch (err) {
+    console.log(err);
     res.json({ status: "error", user: false });
   }
-});
 
-app.get("/hello", (req, res) => {
-  res.send("Hello Bitches");
+  console.log(req.body.email);
+  console.log(req.body.password);
 });
 
 app.listen(1337, () => {
