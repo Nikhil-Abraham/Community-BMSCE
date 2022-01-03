@@ -1,7 +1,7 @@
 import React from "react";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -10,8 +10,10 @@ function App() {
       <Router>
         <div>
           <h1>Welcome to the communiti</h1>
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
         </div>
       </Router>
     </div>
