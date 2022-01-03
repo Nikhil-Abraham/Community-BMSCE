@@ -9,7 +9,6 @@ function App() {
       <h1>Communiti</h1>
       <Router>
         <div>
-          <h1>Welcome to the communiti</h1>
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />

@@ -1,0 +1,22 @@
+Alumni:
+  Pages:
+    Dashboard:
+      feed
+      side nav
+    Profile Page:
+    Chat Room:
+    Create Project:
+
+Student:
+  Pages:
+    Dashboard:
+      feed:
+        Articles from alumni
+      side nav:
+        Home
+        Chat
+        Projects
+        Profile
+        Logout
+    Profile Page:
+    Chat Room:
