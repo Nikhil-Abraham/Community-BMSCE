@@ -1,7 +1,8 @@
 Alumni:
   Pages:
     Dashboard:
-      feed
+      feed:
+        Post Article Option
       side nav
     Profile Page:
     Chat Room:
@@ -9,7 +10,7 @@ Alumni:
 
 Student:
   Pages:
-    Dashboard:
+    Dashboard:  #NAYANA 
       feed:
         Articles from alumni
       side nav:
@@ -18,5 +19,12 @@ Student:
         Projects
         Profile
         Logout
-    Profile Page:
+    Profile Page:    #NEHA 
+      Pic
+      name
+      bio
+      sem class 
+      LinkedIn
+      github link
+      Prev Project   
     Chat Room:
