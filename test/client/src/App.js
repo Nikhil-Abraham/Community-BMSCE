@@ -1,18 +1,20 @@
 import React from "react";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <h1>Communiti</h1>
+      <h1>Welcome to the Community</h1>
+      <Home/>
       <Router>
         <div>
-          <h1>Welcome to the communiti</h1>
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/" element={<Home />} />
           </Routes>
         </div>
       </Router>
