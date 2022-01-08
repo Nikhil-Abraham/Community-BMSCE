@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Community</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="content-block2">
+    <ul>
+      <li data-text="Home"><a>Home</a></li>
+      <li data-text="Top Stories"><a>Top Stories</a></li>
+      {% if user.is_authenticated %}
+      <li data-text="Logout"><a href="logout">Logout</a></li>
+      {% else %}
+      <li data-text="Login"><a href="login">Login</a></li>
+      <li data-text="Sign_Up"><a href="register">Sign Up</a></li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <div class="box-container">
+    <div class="box-1">
+      <div class="caption">
+        <span class="border">Community</span>
+      </div>
+    </div>
+    <div class="content-block">
+      <!-- About Us Text -->
+      <div class="about">
+        About Us
+      </div>
+      <!-- Verticle Line -->
+      <div class="vr" style="height: 45px;">
+      </div>
+      <!-- About Us Discription -->
+      <div class="discription">
+        Be a part of our Community.
+        Share your innovative ideas and projects. 
+        And a lot more to explore.
+      </div>
+    </div>
+    <div class="box-2">
+      <div class="heading">
+        <span class="heading-text">
+          Creative minds make a better World!
+        </span>
+      </div>
+    </div>
+    
+  <footer>
+    <p class="sig">Neha</p>
+    <p class="sig">Nikhil</p>
+    <p class="sig">Nayana</p>
+  </footer> 
+</body>
+
+</html>

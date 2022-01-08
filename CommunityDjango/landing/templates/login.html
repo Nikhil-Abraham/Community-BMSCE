@@ -1,0 +1,28 @@
+{% block body %}
+
+<h1>Community</h1>
+<div class="bg-image"></div>
+<form
+  class="box"
+  id="form"
+  action="login"
+  onsubmit="return validate()"
+  method="post"
+>
+  {% csrf_token %}
+  <h2>Login</h2>
+  <input
+    type="text"
+    name="username"
+    id="email"
+    placeholder="Username"
+    autocomplete="off"
+  />
+  <input type="password" name="password" id="password" placeholder="Password" />
+  <input type="submit" value="Login" id="login-submit" />
+  <p>Not a memeber?</p>
+  <a href="{% url 'landing:register' %}"> Sign Up</a>
+</form>
+{% for message in messages %}
+<div>{{ message }}</div>
+{% endfor %} {% endblock %}
