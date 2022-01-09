@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.db.models import query
-from django.db.models import Q
 from django.shortcuts import redirect, render
 from django.db.models import Q
 from django.views import View
@@ -20,6 +19,8 @@ from django.contrib.auth.models import User
 # Create your views here.
 @login_required(login_url='accounts:login')
 def socialHome(request):
+  print('Entered Home <<<<<<<<<<<<<<<<<<')
+  print(request)
   if request.method == "POST":
     posts = Post.objects.all().order_by('-created_on')
     form = PostFeedForm(request.POST)
@@ -30,12 +31,11 @@ def socialHome(request):
     return HttpResponseRedirect(request.path)
 
   else:
+    print(request)
     posts = Post.objects.all().order_by('-created_on')
+    current_user = Community_User.objects.get(user = request.user)
     form = PostFeedForm()
     users = Community_User.objects.all()
-
-    user = request.user
-    current_user = Community_User.objects.get(user = user)
 
     context = {
       "post_list": posts,

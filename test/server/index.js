@@ -1,16 +1,21 @@
-const express = require("express");
+import express from "express";
 const app = express();
-const cors = require("cors");
-const mongoose = require("mongoose");
-const { User } = require("./models/user.model");
+import cors from "cors";
+import mongoose from "mongoose";
+import User from "./models/user.model";
 const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
+const postRoutes = require("./routes/posts");
 const bcrypt = require("bcrypt");
 
 app.use(cors());
 app.use(express.json());
 
 mongoose.connect("mongodb+srv://admin:admin@cluster0.h7art.mongodb.net/test");
+
+app.use("/api/user", userRouter);
+app.use("/api/auth", authRouter);
+app.use("/posts", postRoutes);
 
 app.post("/api/register", async (req, res) => {
   try {
@@ -49,11 +54,6 @@ app.post("/api/login", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-<<<<<<< HEAD
-app.use("/api/user", userRouter);
-app.use("/api/auth", authRouter);
-=======
 app.post("/api/profile", async (req, res) => {
   try {
     const user = await User.findOne({
@@ -61,30 +61,28 @@ app.post("/api/profile", async (req, res) => {
     });
     if (user) {
       res.json({ status: "ok", user: true });
-      user.name =req.body.name || user.name;
-      user.profile =req.body.profile || user.profile;
-      user.bio =req.body.bio || user.bio;
-      user.semester =req.body.semester || user.semester;
-      user.linked_in =req.body.linked_in || user.linked_in;
-      user.github =req.body.github || user.github;
+      user.name = req.body.name || user.name;
+      user.profile = req.body.profile || user.profile;
+      user.bio = req.body.bio || user.bio;
+      user.semester = req.body.semester || user.semester;
+      user.linked_in = req.body.linked_in || user.linked_in;
+      user.github = req.body.github || user.github;
 
-    const updatedUser =await user.save();
+      const updatedUser = await user.save();
 
-    res.json({
-      name: updatedUser.name,
-      profile:updatedUser.profile,
-      bio: updatedUser.bio,
-      semester: updatedUser.semester,
-      linked_in: updatedUser.linked_in,
-      github: updatedUser.github,
-    })
-    } 
-    else {
+      res.json({
+        name: updatedUser.name,
+        profile: updatedUser.profile,
+        bio: updatedUser.bio,
+        semester: updatedUser.semester,
+        linked_in: updatedUser.linked_in,
+        github: updatedUser.github,
+      });
+    } else {
       res.json({ status: "error", user: false });
     }
     console.log(user);
-  } 
-  catch (err) {
+  } catch (err) {
     console.log(err);
     res.json({ status: "error", user: false });
   }
@@ -92,7 +90,6 @@ app.post("/api/profile", async (req, res) => {
   console.log(req.body.email);
   console.log(req.body.password);
 });
->>>>>>> c98a892533bf5aaecf8624f0a00466bf26901c81
 
 app.listen(1337, () => {
   console.log("Server started on 1337");

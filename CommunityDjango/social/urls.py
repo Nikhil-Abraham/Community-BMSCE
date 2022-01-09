@@ -3,7 +3,6 @@ from . import views
 
 app_name = 'social'
 urlpatterns = [
-  path('',views.socialHome,name='index'),
-  path('explore/',views.explore,name='explore'),
+  path('',views.socialHome,name='index')
 
 ]
