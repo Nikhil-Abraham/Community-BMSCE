@@ -1,0 +1,35 @@
+<!-- {% extends 'social/base.html' %}
+{% load static %} -->
+
+{% block title %}
+  Community
+{% endblock title %}
+
+{% block content %}
+  <div class="blurred-wrapper">
+    <div class="color-layer">
+      {% include 'social/nav.html' %}
+      {% include 'social/top-nav.html' %}
+        <div class="container feed_area">
+          <div class="post_area">
+            <img class="profile-pic" src="{{request.user.parapet_user.profile_pic.url}}">
+            <div class="profile_post_area">
+              <form method="POST" class="post_form">
+                {% csrf_token %}
+                {{ form }}
+                <button class="btn " type="submit"><i class="fa fa-paper-plane post_btn"></i></button>
+              </form>
+            </div>   
+          </div>
+          {% if post_list.all.count == 0 %}
+            <div class="no-post">
+              No Recent Posts
+            </div>
+          {% endif %}
+          {% include 'social/post-list.html' %}
+          <div class="end-article"></div>
+        </div>
+      <!-- {% include 'social/right-sidebar.html' %} -->
+    </div>
+  </div>
+{% endblock content %}
